@@ -1,0 +1,3 @@
+LDLIBS=`pkg-config --libs allegro_monolith-debug-5` -lm -lGL -lz
+CFLAGS=-Isrc
+src/game: src/actor.o src/common.o  src/game.o src/level.o src/main.o src/midi.o src/music.o src/render.o src/land/land.o

@@ -1,0 +1,19 @@
+LDLIBS=`pkg-config --libs \
+	allegro_acodec-5      \
+	allegro_font-5        \
+	allegro_dialog-5      \
+	allegro_main-5        \
+	allegro_image-5       \
+	allegro_video-5       \
+	allegro-5             \
+	allegro_primitives-5  \
+	allegro_physfs-5      \
+	allegro_audio-5       \
+	allegro_memfile-5     \
+	allegro_ttf-5         \
+	allegro_color-5`      \
+	-framework OpenGL -lz
+CFLAGS=-Isrc
+Flowers\ by\ Allefant.app/Contents/MacOS/game: src/game
+	mv src/game "$@"
+src/game: src/actor.o src/common.o  src/game.o src/level.o src/main.o src/midi.o src/music.o src/render.o src/land/land.o
