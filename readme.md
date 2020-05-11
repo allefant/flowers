@@ -15,14 +15,17 @@ The game only needs Allegro. I provided my Linux, Windows and OSX
 makefiles.
 
 Linux (Ubuntu):
+
     sudo apt install liballegro5-dev
     make -f Makefile.linux
 
 Windows (Msys2):
+
     pacman -S mingw-w64-x86_64-allegro
     make -f Makefile.msys2
 
 OSX (homebrew):
+
     brew install allegro
     make -f Makefile.osx
 
